@@ -5,7 +5,7 @@ var Note = require('../models/note');
 router.get('/', function( req, res ) {
     Note.find( function(err, note) {
         res.render('notes', { title: 'Notes App!', notes: note } );
-    });
+    }).sort({updatedAt: -1});
 });
 
 router.post('/', function( req, res ) {
