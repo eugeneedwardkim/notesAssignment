@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var methodOverride = require('method-override');
-mongoose.connect('mongodb://localhost/songs');
+mongoose.connect('mongodb://localhost/notes');
 
 var index = require('./routes/index');
 var notes = require('./routes/notes');
