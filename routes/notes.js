@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var note = require('../models/note');
+var Note = require('../models/note');
 
 router.get('/', function( req, res ) {
     Note.find( function(err, note) {
-        res.render('note', { title: 'Notes App!', note: note } );
+        res.render('notes', { title: 'Notes App!', notes: note } );
     });
 });
 

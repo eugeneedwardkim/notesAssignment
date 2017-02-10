@@ -11,9 +11,9 @@
         <input placeholder="Tell me more about this thing" name="description" />
         <button class='btn'>Slap it On!</button>
     <ul>
-        <% notes.forEach( function (song) { %>
+        <% notes.forEach( function (note) { %>
             <li>
-                <a href =<%= '/notes/' + notes.id %> >
+                <a href =<%= '/notes/' + note.id %> >
                     <%= note.title %>
                 </a>
             </li>
