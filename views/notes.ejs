@@ -1,0 +1,25 @@
+<html>
+<head>
+    <% include ./partials/head %>
+</head>
+
+<body> 
+    <% include ./partials/nav %>
+    <h1>Is You Needing Reminders?</h1>
+    <form action="/notes" method='POST'>
+        <input placeholder="What's This About?" name="title" />
+        <input placeholder="Tell me more about this thing" name="description" />
+        <button class='btn'>Slap it On!</button>
+    <ul>
+        <% notes.forEach( function (song) { %>
+            <li>
+                <a href =<%= '/notes/' + notes.id %> >
+                    <%= note.title %>
+                </a>
+            </li>
+         <% }) %>
+    </ul>
+    </form>
+</body>
+
+</html>
